@@ -1,0 +1,113 @@
+.history-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.history-container .list-header {
+  padding-bottom: 12px;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 8px;
+  position: relative;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 17px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background-color: var(--border-subtle);
+  z-index: 0;
+}
+
+.timeline-item {
+  display: flex;
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+
+.timeline-icon {
+  width: 40px;
+  height: 40px;
+  background-color: var(--bg-surface);
+  color: var(--accent-color);
+  border-radius: 12px;
+  border: 4px solid var(--bg-app);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+}
+
+.timeline-content {
+  background-color: var(--bg-surface);
+  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-lg);
+  padding: 16px 20px;
+  flex: 1;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid var(--border-subtle);
+}
+
+.timeline-content:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-accent);
+  transform: translateY(-2px);
+}
+
+.timeline-title {
+  margin: 0 0 6px 0;
+  font-size: 0.875rem;
+  font-weight: 500;
+  word-break: break-all;
+  color: var(--text-primary);
+}
+
+.timeline-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.timeline-time {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+}
+
+.status-badge {
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.7rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.status-badge.success {
+  background-color: var(--success-bg);
+  color: var(--success-color);
+}
+
+.status-badge.failed, .status-badge.error {
+  background-color: var(--error-bg);
+  color: var(--error-color);
+}
+
+.status-badge.pending {
+  background-color: var(--warning-bg);
+  color: var(--warning-color);
+}

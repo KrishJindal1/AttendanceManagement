@@ -1,0 +1,32 @@
+.full-history-container {
+  padding: 24px;
+  margin: 24px auto;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.full-history-header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 30px;
+}
+
+.full-history-header h2 {
+  margin: 0;
+  color: var(--text-color);
+  font-size: 1.5rem;
+}
+
+.inline-icon {
+  display: inline-flex;
+  vertical-align: middle;
+  margin-right: 8px;
+  color: var(--accent-light);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}

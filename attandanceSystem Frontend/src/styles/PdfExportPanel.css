@@ -1,0 +1,124 @@
+.pdf-export-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  padding: 16px;
+  border-radius: var(--radius-lg);
+}
+
+.pdf-export-title {
+  margin: 0;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.pdf-export-desc {
+  margin: 0;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  color: var(--text-muted);
+}
+
+.pdf-export-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 12px;
+  border-radius: var(--radius-md);
+  background-color: var(--bg-surface);
+  border: 1px solid var(--border-subtle);
+}
+
+.pdf-export-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+}
+
+.pdf-export-radio {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  cursor: pointer;
+  font-size: 0.8125rem;
+  color: var(--text-primary);
+}
+
+.pdf-export-radio input {
+  margin-top: 3px;
+  accent-color: var(--accent-color);
+}
+
+.pdf-export-radio > span {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.pdf-export-radio .hint {
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--text-muted);
+}
+
+.pdf-export-class {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.pdf-export-class label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.pdf-export-class-input {
+  width: 100%;
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-strong);
+  background: var(--bg-app);
+  color: var(--text-primary);
+  font-size: 0.8125rem;
+}
+
+.pdf-export-class-input:focus {
+  outline: none;
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 2px var(--accent-light);
+}
+
+.pdf-export-error {
+  font-size: 0.8125rem;
+  color: var(--error-color);
+  padding: 8px 10px;
+  border-radius: var(--radius-sm);
+  background: var(--error-bg);
+  border: 1px solid var(--error-border);
+}
+
+.pdf-export-btn {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}
+
+.pdf-export-btn .spinner {
+  animation: pdf-spin 1s linear infinite;
+}
+
+@keyframes pdf-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
